@@ -9,18 +9,19 @@
          self.right = None
 
 '''
+from bean import TreeNode
 
+'''
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
-
-
+'''
 
 
 class SameTree:
-    def isSameTree(self, p:TreeNode, q:TreeNode)->bool:
+    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         if not p and not q:
             return True
         if not p or not q:
@@ -28,8 +29,3 @@ class SameTree:
         if p.val != q.val:
             return False
         return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
-
-
-
-
-
